@@ -4,7 +4,7 @@
 
 // Video Code Set in PROD page, pulling from custom field code
 
- if (videoCode !== 'undefined') { // Checks for products without video field values
+ if (videoCode) { // Checks for products without video field values
  	var	videoSwitch = $('<li id="' + videoCode + '" class="o-layout__item x-product-layout-images__thumbnail-video"><span class="u-icon-triangle-right"></span></li>');
  	$(videoSwitch).appendTo('#thumbnails');
 
