@@ -1,0 +1,70 @@
+#main_frame.main-frame-active { /* .main-frame-active class set in js */
+	padding: 0 30px;
+	display: block;
+	position: relative;
+}
+
+.main-frame-active .fullscreen {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-height: 500px;
+	padding-bottom: 75%; /* Sets height for video to fill */
+	overflow: hidden;
+}
+.main-frame-active .video { /* Sets overflow container for responsive video to fill area */
+	display: block;
+	left: 0px;
+	overflow: hidden;
+	padding-bottom: 100%;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.main-frame-active .video .wrapper { /* Sets video to fill area and centers contents */
+	display: block;
+	height: 300%;
+	left: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.main-frame-active .video iframe {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.x-product-layout-images__thumbnail-image,
+.x-product-layout-images__thumbnail-video { /* Will need to be updated to work on live site from here down */
+	display: flex;
+	padding: 5px;
+	margin-left: 16px;
+	margin-bottom: 0;
+	border: solid 2px #f0f0f0;
+	justify-content: center;
+}
+
+.x-product-layout-images__thumbnail-video {
+	background-color: rgba(241, 241, 241, 0.3);
+}
+
+.x-product-layout-images__thumbnail-image img,
+.x-product-layout-images__thumbnail-video span {
+	align-self: center;
+}
+
+.x-product-layout-images__thumbnail-video span {
+	display: block;
+	padding: 5px 4px 5px 6px;
+	border: solid 2px #4a4a4a;
+	border-radius: 50%;
+}

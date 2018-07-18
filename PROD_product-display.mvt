@@ -1,0 +1,22 @@
+<mvt:comment>Add this snippet above the product image containing div</mvt:comment>
+<div id="main_frame">
+	<div class="fullscreen">
+		<div class="video">
+			<div id="main_frame_video" class="wrapper">
+			</div>
+		</div>
+	</div>
+</div>
+
+<mvt:comment>Place at bottom of page. Cooresponds with Custom Field Group with code of 'opt-product-videos'</mvt:comment>
+<mvt:do file="g.Module_Root $ '/modules/util/customfld.mvc'" name="l.success" value="Group_Load_Code('opt-product-videos', l.product_videos)" />
+<mvt:do file="g.Module_Root $ '/modules/util/customfld.mvc'" name="l.success" value="ProductFieldAndValueList_Load_Group(l.settings:product:id, l.product_videos:id, l.settings:product_videos_values)" />
+<script>
+	var videoCode; // Sets undefined value for script check
+	<mvt:foreach iterator="video" array="product_videos_values">
+		<mvt:if expr="l.settings:video:value">
+			var videoCode = '&mvt:video:code;',
+				videoUrl = '&mvt:video:value;';
+		</mvt:if>
+	</mvt:foreach>
+</script>
