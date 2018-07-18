@@ -4,20 +4,17 @@
 
 // Video Code Set in PROD page, pulling from custom field code
 
- if (videoCode) { // Checks for products without video field values
- 	var	videoSwitch = $('<li id="' + videoCode + '" class="o-layout__item x-product-layout-images__thumbnail-video"><span class="u-icon-triangle-right"></span></li>');
- 	$(videoSwitch).appendTo('#thumbnails');
+if (videoCode) {
+	var	videoSwitch = $('<li id="' + videoCode + '" class="o-layout__item x-product-layout-images__thumbnail-video"><span class="u-icon-triangle-right"></span></li>');
+	$(videoSwitch).appendTo('#thumbnails');
 
- 	var videoTrigger = document.getElementById(videoCode);
- }
+	var videoTrigger = document.getElementById(videoCode),
 
-// Identifies the Main Frame and generates the iframe for appendation
-var	mainFrame = document.getElementById('main_frame'),
+	// Identifies the Main Frame and generates the iframe for appendation
+	mainFrame = document.getElementById('main_frame'),
 	mainFrameVideo = document.getElementById('main_frame_video'),
 	mainImage = document.getElementById('main_image'),
 	videoClearTriggers = $('#thumbnails li img');
-
-if (videoTrigger !== null) {
 
 	function showVideo(){
 
@@ -83,5 +80,6 @@ if (videoTrigger !== null) {
 
 
 	});
+
 
 }
